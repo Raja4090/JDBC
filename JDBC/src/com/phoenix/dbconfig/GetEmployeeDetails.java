@@ -11,15 +11,15 @@ public class GetEmployeeDetails {
        Connection con=null;
        try {
     	   con=OracleConnection.getOracleConnection();
-    	   String sql="select * from login";
+    	   String sql="select * from employees";
     	   Statement stmt=con.createStatement();
     	   ResultSet rs = stmt.executeQuery(sql);
     	   
     	   while(rs.next())
     	   {
-    		    /*String firstName = rs.getString("first_name");
+    		    String firstName = rs.getString("first_name");
     	        int salary=rs.getInt("salary");
-    	        System.out.println("First_Name: "+firstName+"\tSalary: "+salary);*/
+    	        System.out.println("First_Name: "+firstName+"\tSalary: "+salary);
     	    
     	   }
        }
